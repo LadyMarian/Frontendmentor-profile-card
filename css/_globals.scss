@@ -1,0 +1,68 @@
+$darkCyan: hsl(185, 75%, 39%);
+$veryDarkBlue: hsl(229,23%,23%);
+$darkGrayishBlue: hsl(227,10%,46%);
+
+$darkGray: hsl(0,0%,59%);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $darkCyan;
+    margin: 0;
+    font-size: 1.125rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: $veryDarkBlue;
+    font-weight: 300;
+    position: relative;    
+    display: flex;
+    height: 100%;    
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-img {
+    height: 170vw;
+    position: absolute;
+
+    &__top {
+        top: -85vw;
+        right: 45%;
+    }
+    &__bottom {    
+        left: 45%;
+        bottom: -85vw;
+    }
+}
+
+.light {
+    color: $darkGrayishBlue;
+}
+
+.small {
+    font-size: 0.8rem;
+}
+strong {
+    font-weight: 700;
+}
+
+@media (min-width: 600px) and (orientation: landscape){
+    .bg-img {
+        height: auto;
+        width: 70vw;
+        position: absolute;
+        
+        &__top {
+            top: -33vw; 
+            left: -20%;
+        }
+        &__bottom {    
+            bottom: -45vw;
+            right: -50%;
+        }
+    }
+}
